@@ -4,7 +4,7 @@
         box-sizing: border-box;
         font-family: Arial, sans-serif;
         background-color: #f5f5f5;
-        background-image: url("../portfolio-grid-main/img/bg-img.jpg");
+        background-image: url("img/bg-img.jpg");
         background-size: cover;
         background-position: center;
       }
