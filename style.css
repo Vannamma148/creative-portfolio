@@ -1,0 +1,217 @@
+  body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        background-image: url("../portfolio-grid-main/img/bg-img.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 16px;
+        padding: 20px;
+      }
+
+      /* General div styling */
+      .parent .child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        justify-content: center;
+        padding: 20px;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-image: linear-gradient(147deg, #00000044 0%, #04619f46 74%);
+        backdrop-filter: blur(4px);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 0.6rem 0;
+        text-align: center;
+      }
+      .child>h2{
+        
+        margin-bottom: 1.4rem;
+       /* border-bottom: 3px double white; */
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      /* Specific div styles */
+      .div1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 6;
+      }
+
+      .div4 {
+        grid-column: 3 / 5;
+        grid-row: 4 / 6;
+      }
+
+      .div5 {
+        grid-column: 3 / 5;
+        grid-row: 1 / 4;
+      }
+
+      .div6 {
+        grid-column: 5 / 8;
+        grid-row: 1 / 4;
+        /* background-color: #ff9f43; */
+      }
+
+      .div7 {
+        grid-column: 5 / 8;
+        grid-row: 4 / 6;
+        /* background-color: #04619f; */
+      }
+
+      .div1 img {
+        height: 200px;
+        border-radius: 50%;
+      }
+
+      .pitem img {
+        height: 80px;
+        margin: 10px 0;
+      }
+
+      .pitem {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: #f5f5f5;
+        border-radius: 13px 0;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .pname {
+        margin-bottom: 0.9rem;
+        margin-top: 0;
+        color: #000;
+        font-size: 1rem;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .sitem {
+        background-image: linear-gradient(147deg, #ffffff 10%, #57657419 64%);
+        height: 80px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 0 13px 8px;
+        display: grid;
+        /* Add grid layout here */
+        place-items: center;
+        /* This will center content both vertically and horizontally */
+        padding: 1rem;
+        color: #ffffff;
+        font-size: 1rem;
+        /* background: #FFFFFF; */
+        text-shadow: 1px 3px 0 #96969607, 1px 13px 5px #aba8a8;
+        
+      }
+
+      .div4 h3 {
+        margin-top: 1rem;
+      }
+
+      .div4 p {
+        margin: 0.6px 0;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="search"],
+      input[type="password"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="time"],
+      textarea,
+      select {
+        font-size: 14px;
+        font-weight: 300;
+
+        border: 1px solid #ffffff;
+        border-radius: 20px;
+        padding: 10px 20px;
+        color: var(--primary-color);
+        margin: 0.2rem 0;
+        height: 26px;
+        box-shadow: none;
+        width: 300px;
+      }
+
+      ::placeholder {
+        color: rgb(0, 0, 0);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .icons i{
+        font-size: 1.4rem;
+        margin: 0.2rem 0.8rem;
+      }
+      .btn-link {
+        padding: 20px;
+        width: 150px;
+        background-color: rgb(231, 231, 231);
+        border-radius: 20px 0;
+        margin: 1rem auto;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(231, 231, 231, 0.111);
+            color: white;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .parent {
+          grid-template-columns: 1fr; /* Single column layout */
+        }
+        .child {
+          grid-column: auto;
+          grid-row: auto;
+        }
+        .div1,
+        .div4,
+        .div5,
+        .div6,
+        .div7 {
+          order: initial; /* Resets order */
+        }
+        .projects {
+          grid-template-columns:1fr 1fr; /* Show one project per row */
+        }
+        .skills {
+          grid-template-columns: repeat(2, 1fr); /* Show 2 skills per row */
+        }
+      }
+    
